@@ -53,28 +53,30 @@ class car(object):
         print("Make : " + self.make)
         print("Color : " + self.color)
 
-print("Menu:")
-print("1. Add Car Details\n"+"2. Delete Car Details\n"+"3. Get Car Details\n"+"4. Exit")
-option = int(input("Select any option to proceed:"))
-
-if option == 1:
-    name = input("Enter name of the car :")
-    model = input("Enter model of the car :")
-    make = input("Enter make of the car :")
-    color = input("Enter color of the car :")
-    regNo = input("Enter registration no of the car(only testing purpose,should find other way) :")
-    carObj = car(name, model, make, color, regNo)
-    carObj.addCarDetails()
-    carObj.printCarDetails()
-
-if option == 2:
-    reg = input("Enter registration number:")
-    car.deleteCarDetails(None, reg)
-
-if option == 3:
-    reg = input("Enter registration number:")
-    car.showCarDetails(None, reg)
-
-if option == 4:
-    print("Exiting....")
-    sys.exit()
+while 1:
+    print("\nMenu:")
+    print("1. Add Car Details\n"+"2. Delete Car Details\n"+"3. Get Car Details\n"+"4. Exit")
+    option = int(input("Select any option to proceed:"))
+    
+    
+    if option == 1:
+        name = input("Enter name of the car :")
+        model = input("Enter model of the car :")
+        make = input("Enter make of the car :")
+        color = input("Enter color of the car :")
+        regNo = input("Enter registration no of the car(only testing purpose,should find other way) :")
+        carObj = car(name, model, make, color, regNo)
+        carObj.addCarDetails()
+        carObj.printCarDetails()
+    
+    if option == 2:
+        reg = input("Enter registration number:")
+        car.deleteCarDetails(None, reg)
+    
+    if option == 3:
+        reg = input("Enter registration number:")
+        car.showCarDetails(None, reg)
+    
+    if option == 4:
+        print("Exiting....")
+        sys.exit()
